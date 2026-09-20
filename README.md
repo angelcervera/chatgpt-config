@@ -22,9 +22,12 @@ Source-controlled ChatGPT configuration: Agent Plugins, reusable Skills, and fut
 │               └── assets/           # optional
 ├── gpts/
 ├── prompts/
-│   └── chat-to-work/
-│       ├── chat-to-work-context-transfer-prompt.md
-│       └── chat-to-work-handoff-prompt.md
+│   ├── chat-to-work/
+│   │   ├── chat-to-work-context-transfer-prompt.md
+│   │   └── chat-to-work-handoff-prompt.md
+│   └── opencode-handoff/
+│       ├── README.md
+│       └── opencode-handoff-prompt.md
 ├── scripts/
 │   ├── validate-plugin.sh
 │   ├── package-plugin.sh
@@ -48,7 +51,7 @@ Canonical skill source:
 plugins/opencode-handoff/skills/opencode-handoff/
 ```
 
-The skill includes `agents/openai.yaml` so ChatGPT Desktop presents it as **OpenCode Handoff**. Implicit invocation is disabled intentionally; select it explicitly when you want a handoff.
+The skill includes `agents/openai.yaml` with the display name **OpenCode Handoff** and `allow_implicit_invocation: true`. These are source settings, not proof that a particular Chat session loaded the skill. For the direct manual workflow, see [Chat → OpenCode](#chat--opencode).
 
 Diagnostic after installation:
 
@@ -61,6 +64,8 @@ Expected response:
 ```text
 OpenCode Handoff v2.0.1 active.
 ```
+
+This is an output smoke check, not independent evidence of skill activation; the wording can also come from conversation context.
 
 ## Validate plugin
 
@@ -131,6 +136,12 @@ Generated ZIP files are never committed.
 
 
 ## Reusable prompts
+
+### Chat → OpenCode
+
+[OpenCode handoff prompt](prompts/opencode-handoff/opencode-handoff-prompt.md): copy the single fenced block into the same Chat conversation to request a self-contained downloadable Markdown handoff directly for OpenCode, without invoking a Skill or moving to Work.
+
+The prompt is based on skill/template v2.0.1, with explicit controls for obligation provenance, guarantee strength, scope fidelity, proportionality, and contract amendments. The [maintenance README](prompts/opencode-handoff/README.md) documents the review, deliberate differences, evidence limits, and regression scenarios. The existing skill remains unchanged; it does not automatically acquire these controls.
 
 ### Chat → Work
 
