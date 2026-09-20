@@ -1,0 +1,3 @@
+# chatgpt-config
+
+Repository initialization.
