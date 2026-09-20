@@ -1,0 +1,7 @@
+interface:
+  display_name: "OpenCode Handoff"
+  short_description: "Generate an OpenCode-ready handoff from this conversation."
+  default_prompt: "Generate the OpenCode handoff for this conversation."
+
+policy:
+  allow_implicit_invocation: false
