@@ -143,6 +143,8 @@ Generated ZIP files are never committed.
 
 The prompt is based on skill/template v2.0.1, with explicit controls for obligation provenance, guarantee strength, scope fidelity, proportionality, and contract amendments. The [maintenance README](prompts/opencode-handoff/README.md) documents the review, deliberate differences, evidence limits, and regression scenarios. The existing skill remains unchanged; it does not automatically acquire these controls.
 
+Prompt **1.1.0** checks whether the brief has enough source-backed detail for SaaSTemplate's `/increment-analyze` workflow. It distinguishes analysis-input readiness from implementation readiness, preserves original evidence and task-local requirements, and retains OpenCode's two fidelity checks and conditional independent audit. Save the generated brief inside the target repository and pass its relative path to `/increment-analyze`; task decomposition and registration remain with that workflow, not with the Chat author. See the maintenance README for the reviewed sources, exact usage and verification limits.
+
 ### Chat → Work
 
 Two reusable prompts are stored under:
