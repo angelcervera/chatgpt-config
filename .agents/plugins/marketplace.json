@@ -1,0 +1,20 @@
+{
+  "name": "angelcervera-chatgpt-config",
+  "interface": {
+    "displayName": "Angel Cervera ChatGPT Config"
+  },
+  "plugins": [
+    {
+      "name": "opencode-handoff",
+      "source": {
+        "source": "local",
+        "path": "./plugins/opencode-handoff"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
