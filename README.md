@@ -21,6 +21,10 @@ Source-controlled ChatGPT configuration: Agent Plugins, reusable Skills, and fut
 │               ├── scripts/          # optional
 │               └── assets/           # optional
 ├── gpts/
+├── prompts/
+│   └── chat-to-work/
+│       ├── chat-to-work-context-transfer-prompt.md
+│       └── chat-to-work-handoff-prompt.md
 ├── scripts/
 │   ├── validate-plugin.sh
 │   ├── package-plugin.sh
@@ -124,6 +128,22 @@ Generated ZIP files are never committed.
 4. Register the plugin in `.agents/plugins/marketplace.json`.
 5. Validate the plugin.
 6. Build either the standalone skill ZIP, the portable plugin ZIP, or both.
+
+
+## Reusable prompts
+
+### Chat → Work
+
+Two reusable prompts are stored under:
+
+```text
+prompts/chat-to-work/
+```
+
+- `chat-to-work-handoff-prompt.md`: paste at the end of a normal Chat conversation to generate a self-contained downloadable Markdown handoff for Work without relying on Skills.
+- `chat-to-work-context-transfer-prompt.md`: paste at the beginning of a Work continuation when the previous Chat context has already been carried into Work and you want Work to treat it as authoritative continuation context.
+
+These prompts are source-controlled separately from Skills because they are plain reusable conversation instructions and do not depend on Skill invocation support.
 
 ## Custom GPTs
 
