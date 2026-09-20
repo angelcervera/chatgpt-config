@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "opencode-handoff",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Generate self-contained, implementation-ready Markdown handoffs from ChatGPT conversations for execution in OpenCode.",
   "author": {
     "name": "Angel Cervera",

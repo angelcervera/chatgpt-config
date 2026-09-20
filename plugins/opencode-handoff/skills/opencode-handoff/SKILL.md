@@ -5,7 +5,7 @@ description: Generate a self-contained, implementation-ready, downloadable Markd
 
 # OpenCode Handoff
 
-Version: 2.0.0
+Version: 2.0.1
 
 ## Purpose
 
@@ -29,7 +29,7 @@ When the user asks for a handoff, an OpenCode handoff, an implementation documen
 
 If the user invokes this plugin/skill and asks for `status`, `diagnostic`, `is this active?`, or equivalent, do not generate a handoff. Reply exactly with:
 
-`OpenCode Handoff v2.0.0 active.`
+`OpenCode Handoff v2.0.1 active.`
 
 This diagnostic exists so the user can verify that the installed skill was actually selected.
 

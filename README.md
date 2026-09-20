@@ -55,7 +55,7 @@ Diagnostic after installation:
 Expected response:
 
 ```text
-OpenCode Handoff v2.0.0 active.
+OpenCode Handoff v2.0.1 active.
 ```
 
 ## Validate plugin
@@ -85,7 +85,7 @@ make package-skill PLUGIN=opencode-handoff SKILL=opencode-handoff
 Artifact:
 
 ```text
-dist/skills/opencode-handoff-2.0.0.zip
+dist/skills/opencode-handoff-2.0.1.zip
 ```
 
 The ZIP contains exactly one top-level `opencode-handoff/` directory with `SKILL.md` and its supporting resources. Upload this ZIP from **Plugins → Skills → Create → Upload from your computer** in ChatGPT Desktop.
@@ -105,7 +105,7 @@ make package PLUGIN=opencode-handoff
 Artifact:
 
 ```text
-dist/opencode-handoff-2.0.0.zip
+dist/opencode-handoff-2.0.1.zip
 ```
 
 Build all plugins:

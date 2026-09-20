@@ -31,7 +31,7 @@ After installation, invoke:
 Expected response:
 
 ```text
-OpenCode Handoff v2.0.0 active.
+OpenCode Handoff v2.0.1 active.
 ```
 
 ## Packaging
